@@ -22,8 +22,8 @@ $(document).ready(function(){
 
 
 function updateFirstArrays(){
-	if (location.hash!="") {
-		randomObjects = JSON.parse(window.location.hash.substring(1));
+	if (location.search!="") {
+		randomObjects = JSON.parse(unescape(location.search.split("?randomfor=")[1]));
 		updateRandomObjects(randomObjects);
 	}
 }
@@ -57,7 +57,7 @@ function updateRandomObjects(arrays){
 		$('#random-list').append('<li>' + obj + '<span onclick="deleteItem('+ id +')">X</span></li>');
 	});
 
-	location.hash = JSON.stringify(arrays);
+	window.history.pushState( {} , '', '?randomfor=' + JSON.stringify(arrays) );
 
 	if (randomObjects.length==0) {
 		$('#result-area').removeClass('show');
