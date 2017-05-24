@@ -392,7 +392,14 @@ body {
 
 
 @media (max-width: 850px){
-    #input-area 		{width: 80%;}
-	#result-area .result-left 	{ left: 30%; }
-	#result-area .result-right 	{ right: 30%; }
+    #input-area         {width: 80%;}
+    #result-area .result-left   { left: 30%; }
+    #result-area .result-right  { right: 30%; }
+}
+@media (max-width: 480px){
+    #logo {width: 180px;}
+    #input-area label {font-size: 20px;}
+    #input-area .info-text {font-size: 14px;}
+    #main-input {width: calc(100% - 100px); height: 48px; font-size: 20px;}
+    #randomize-button {width: 55px; height: 48px;}
 }
