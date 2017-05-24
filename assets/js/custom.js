@@ -1,6 +1,7 @@
 var randomObjects = [];
 var onAnimate = 0;
 var windowType;
+var locationSearchPath;
 
 $(document).ready(function(){
 
@@ -15,7 +16,17 @@ $(document).ready(function(){
 	
 	checkWindow();
 
+	updateFirstArrays();
+
 });
+
+
+function updateFirstArrays(){
+	if (location.hash!="") {
+		randomObjects = JSON.parse(window.location.hash.substring(1));
+		updateRandomObjects(randomObjects);
+	}
+}
 
 function checkWindow(){
 	var windowWidth = $(window).width();
@@ -45,6 +56,8 @@ function updateRandomObjects(arrays){
 	$.each(arrays,function(id, obj){
 		$('#random-list').append('<li>' + obj + '<span onclick="deleteItem('+ id +')">X</span></li>');
 	});
+
+	location.hash = JSON.stringify(arrays);
 
 	if (randomObjects.length==0) {
 		$('#result-area').removeClass('show');
