@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Randomizer</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="input-area">
+			<h1 id="logo">
+				<img src="assets/img/logo.png">
+			</h1>
+			<label>Add something for randomize..</label>
+			<p class="info-text">(Hit the <strong>Enter</strong> for add item)</p>
+			<div id="input-with-submit">
+				<input id="main-input" type="text">
+				<button id="randomize-button" onclick="getRandomItem()">
+					<span class="tooltip-text">Please add item for randomize</span>
+					<img src="assets/img/random-icon.png">
+					<div class="sk-circle">
+					  <div class="sk-circle1 sk-child"></div>
+					  <div class="sk-circle2 sk-child"></div>
+					  <div class="sk-circle3 sk-child"></div>
+					  <div class="sk-circle4 sk-child"></div>
+					  <div class="sk-circle5 sk-child"></div>
+					  <div class="sk-circle6 sk-child"></div>
+					  <div class="sk-circle7 sk-child"></div>
+					  <div class="sk-circle8 sk-child"></div>
+					  <div class="sk-circle9 sk-child"></div>
+					  <div class="sk-circle10 sk-child"></div>
+					  <div class="sk-circle11 sk-child"></div>
+					  <div class="sk-circle12 sk-child"></div>
+					</div>
+				</button>
+			</div>
+			<ul id="random-list"></ul>
+
+			<div id="result-area">
+				<div class="result-left">[</div>
+				<div class="result-right">]</div>
+				<div class="spinner">
+				  <div class="bounce1"></div>
+				  <div class="bounce2"></div>
+				  <div class="bounce3"></div>
+				</div>
+				<h2 id="random-result"></h2>
+			</div>
+
+		</div>
+	</div><!-- Container -->
+</body>
+</html>
